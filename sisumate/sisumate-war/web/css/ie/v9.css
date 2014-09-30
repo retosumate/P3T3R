@@ -1,33 +1,68 @@
 /*
-	Aerial by HTML5 UP
+	ZeroFour by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Wrapper */
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
 
-	#wrapper {
-		opacity: 1;
+	.button
+	{
+		background-image: url('images/grad0-20.svg');
 	}
-
-/* Overlay */
-
-	#overlay {
-		opacity: 1;
+	
+	.box-feature1
+	{
 	}
-
-/* Header */
-
-	#header {
-		opacity: 1;
-	}
-
-		#header nav li {
-			opacity: 1;
+	
+		.box-feature1 header.second
+		{
+			left: 0;
 		}
 
-/* Footer */
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
 
-	#footer {
-		background-image: url("images/footer.svg");
+	#footer-wrapper
+	{
+		background-image: url('images/grad0-35.svg');
+	}
+		
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+	}
+
+		#header .inner
+		{
+			background-image: url('images/grad0-35.svg');
+		}
+
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+	
+	.dropotron
+	{
+		background-image: url('images/grad35-0.svg');
+	}
+	
+/*********************************************************************************/
+/* Mobile UI                                                                     */
+/*********************************************************************************/
+
+	#titleBar
+	{
+		background-image: url('images/grad0-35.svg');
+	}
+
+	#navPanel
+	{
+		background-image: url('images/grad0-35.svg');
 	}
