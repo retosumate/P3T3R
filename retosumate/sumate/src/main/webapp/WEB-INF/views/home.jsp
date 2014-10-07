@@ -12,24 +12,23 @@
     <title>S&uacute;mate</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/plugins/bootstrap.min.css" rel="stylesheet">
-    <link href="css/full-slider.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/plugins/bootstrap.min.css" rel="stylesheet">
     
     <!-- MetisMenu CSS -->
-    <link href="css/plugins/metisMenu.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/plugins/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="css/plugins/timeline.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/plugins/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/sumate-main.css" rel="stylesheet">
-    <link href="css/carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/sumate-main.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/carousel.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     
     
     <body>
@@ -39,7 +38,7 @@
                 <div class="navbar-header">
                     <p></p>
                     <a class="h1" href="#" style="margin-left: 5px;"><i class="fa fa-1 fa-fw fa-plus-square"></i>S&uacute;mate</a>
-                    
+                   
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -146,7 +145,7 @@
                  </ol>
                  <div class="carousel-inner">
                    <div class="item active">
-                     <img src="gambar/carr_bkg_001.jpg" data-src="holder.js/1024x200" alt="Experiencias Previas">
+                     <img src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_001.jpg" data-src="holder.js/1024x200" alt="Experiencias Previas">
                      <div class="container">
                          <div class="carousel-caption">                      
                            <a class="btn btn-success" href="#" role="button">Experiencias Previas&nbsp;<span class="badge">(8)</span></a>                   
@@ -154,7 +153,7 @@
                      </div>
                    </div>
                    <div class="item">
-                     <img src="gambar/carr_bkg_002.jpg" data-src="holder.js/1024x200" alt="Eventos">
+                     <img src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_002.jpg" data-src="holder.js/1024x200" alt="Eventos">
                      <div class="container">
                          <div class="carousel-caption">
                              <a class="btn btn-info" href="#" role="button">Eventos&nbsp;<span class="badge">(3)</span></a>
@@ -162,7 +161,7 @@
                      </div>
                    </div>
                    <div class="item">
-                     <img src="gambar/carr_bkg_003.jpg" data-src="holder.js/1024x200" alt="Noticias">
+                     <img src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_003.jpg" data-src="holder.js/1024x200" alt="Noticias">
                      <div class="container">
                          <div class="carousel-caption">
                              <a class="btn btn-danger" href="#" role="button">Noticias&nbsp;<span class="badge">(4)</span></a>
@@ -186,7 +185,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2 display-inline">   
                             <div class="boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="250" height="200" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="250" height="200" />
                             </div>
                             <div class="text-justify">
                                 <a><i class="fa fa-bullhorn fa-fw"></i>&nbsp;&nbsp;Vivienda para ¡TODOS!</a><br>
@@ -202,7 +201,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2">   
                             <div class="img-thumbnail boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="100" height="100" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="100" height="100" />
                             </div>
                             <div class="text-justify">
                                 <p><a><span class="glyphicon glyphicon-bullhorn"></span>Vivienda para ¡TODOS!</a></p>
@@ -221,7 +220,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2">   
                             <div class="img-thumbnail boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="100" height="100" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="100" height="100" />
                             </div>
                             <div class="text-justify">
                                 <p><a><span class="glyphicon glyphicon-bullhorn"></span>Vivienda para ¡TODOS!</a></p>
@@ -237,7 +236,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2">   
                             <div class="img-thumbnail boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="100" height="100" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="100" height="100" />
                             </div>
                             <div class="text-justify">
                                 <p><a><span class="glyphicon glyphicon-bullhorn"></span>Vivienda para ¡TODOS!</a></p>
@@ -256,7 +255,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2">   
                             <div class="img-thumbnail boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="100" height="100" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="100" height="100" />
                             </div>
                             <div class="text-justify">
                                 <p><a><span class="glyphicon glyphicon-bullhorn"></span>Vivienda para ¡TODOS!</a></p>
@@ -272,7 +271,7 @@
                         </div>
                         <div class="panel-body panel-margin-narrow2">   
                             <div class="img-thumbnail boxed-image1">
-                                <img src="gambar/ImagenPortada4.jpg" width="100" height="100" />
+                                <img src="${pageContext.request.contextPath}/resources/gambar/ImagenPortada4.jpg" width="100" height="100" />
                             </div>
                             <div class="text-justify">
                                 <p><a><span class="glyphicon glyphicon-bullhorn"></span>Vivienda para ¡TODOS!</a></p>
@@ -289,21 +288,21 @@
         <!-- --------------------------------------------------------------- -->
         
         <!-- jQuery Version 1.11.0 -->
-        <script src="js/jquery-1.11.0.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.0.js"></script>
         
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/plugins/metisMenu/metisMenu.min.js"></script>
 
         <!-- Morris Charts JavaScript -->
-        <script src="js/plugins/morris/raphael.min.js"></script>
-        <script src="js/plugins/morris/morris.min.js"></script>
-        <script src="js/plugins/morris/morris-data.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/plugins/morris/raphael.min.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/plugins/morris/morris.min.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/plugins/morris/morris-data.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="js/sumate-main.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/sumate-main.js"></script>
         
         
         <footer class="footer-fixed">
