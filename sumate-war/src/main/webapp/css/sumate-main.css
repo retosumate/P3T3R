@@ -1,0 +1,111 @@
+body {
+    background-color: #FFFFFF;   
+}
+
+.wrapper {
+    width: 100%;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+    min-height: 568px;
+    background-color: #fff;    
+}
+
+.overlay {
+    background-repeat: repeat;
+    background: url(../gambar/bkgd/pattern-dots.png) fixed;
+}
+
+.panel-margin-narrow1 {
+    padding: 5px 10px 5px 10px;
+    margin: 0 0 0 0;
+}
+
+.panel-margin-narrow2 {
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
+}
+
+.boxed-image1 {
+    padding: 0px 2px 0px 0px;
+    margin: 0 0 0 0;
+}
+
+.footer-fixed {
+    margin-top: 60px;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.gradient-diag1 {
+    background-image: -moz-linear-gradient(-65deg, #1dc096 40%, #1896a1);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(40%, #1dc096), color-stop(100%, #1896a1));
+    background-image: -webkit-linear-gradient(-65deg, #1dc096 40%, #1896a1);
+    background-image: -o-linear-gradient(-65deg, #1dc096 40%, #1896a1);
+    background-image: -ms-linear-gradient(-65deg, #1dc096 40%, #1896a1);
+    background-image: linear-gradient(155deg, #1dc096 40%,#1896a1);
+    color: #FFFFFF;
+}
+
+.gradient-diag1 h4 {
+    color: #FFFFFF;
+}
+
+.gradient-diag2 {
+    background-image: -moz-linear-gradient(-65deg, #2292d9 40%, #1d48ba);
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(40%, #2292d9), color-stop(100%, #1d48ba));
+    background-image: -webkit-linear-gradient(-65deg, #2292d9 40%, #1d48ba);
+    background-image: -o-linear-gradient(-65deg, #2292d9 40%, #1d48ba);
+    background-image: -ms-linear-gradient(-65deg, #2292d9 40%, #1d48ba);
+    background-image: linear-gradient(155deg, #2292d9 40%,#1d48ba);
+}
+
+.gradient-diag2 h4 {
+    color: #FFFFFF;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 200px;
+  margin-bottom: 15px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 200px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  -webkit-border-image: round;
+  -webkit-border-r: 4em;
+}
+/* END CAROUSEL 
+-------------------------------------------------- */

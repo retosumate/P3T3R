@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/aop 
+                            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                            http://www.springframework.org/schema/tx 
+                            http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/mvc
+                            http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+    <context:component-scan base-package="com.sumate.repository.hibernate"/>
+    <context:property-placeholder location="classpath:/spring/system.properties" />  
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+    
+    <!--    ===============================================================  -->
+    <!--    Load Transactional Hibernate Datasource/Session factory =======  -->
+    <!--    ===============================================================  -->
+    <bean id="hbmDataSource" 
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${database.driver}" />
+        <property name="url" value="${database.url}" />
+        <property name="username" value="${database.username}" />
+        <property name="password" value="${database.password}" />
+    </bean>
+
+    <bean id="hbmSessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+          p:dataSource-ref="hbmDataSource"
+          p:packagesToScan="com.sumate">
+        
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.generate_statistics">${hibernate.generate_statistics}</prop>
+            </props>
+        </property>
+        
+        <property name="configLocation" value="classpath:/spring/hibernate.cfg.xml" />              
+    </bean>
+    
+    <!--    ===============================================================  -->
+    <!--    Load Transactional Hibernate Transactional Manager   ==========  -->
+    <!--    ===============================================================  -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="hbmSessionFactory" ></property>
+    </bean>     
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>   
+    
+    <!--    ===============================================================  -->
+    <!--    Load Autowired Spring/Hibernate Beans   =======================  -->
+    <!--    ===============================================================  -->
+    <bean id="personDAO" class="com.sumate.repository.hibernate.dao.PersonDAOImpl">
+        <property name="sessionFactory" ref="hbmSessionFactory" />       
+    </bean>
+    
+    <bean id="personService" class="com.sumate.service.PersonServiceImpl">
+        <property name="personDAO" ref="personDAO" />
+    </bean>       
+
+    
+
+</beans>
