@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 8, 2014 6:22:55 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.Usuario" table="USUARIO">
+        <id name="idUsuario" type="int">
+            <column name="IDUSUARIO" />
+            <generator class="assigned" />
+        </id>
+        <property name="vNombres" type="java.lang.String" access="field">
+            <column name="VNOMBRES" />
+        </property>
+        <property name="vApellidos" type="java.lang.String" access="field">
+            <column name="VAPELLIDOS" />
+        </property>
+        <property name="vEmail" type="java.lang.String" access="field">
+            <column name="VEMAIL" />
+        </property>
+        <property name="vLogin" type="java.lang.String" access="field">
+            <column name="VLOGIN" />
+        </property>
+        <property name="vContrasenia" type="java.lang.String" access="field">
+            <column name="VCONTRASENIA" />
+        </property>
+        <property name="iTipo" type="int" access="field">
+            <column name="ITIPO" />
+        </property>
+        <property name="iActivo" type="int" access="field">
+            <column name="IACTIVO" />
+        </property>
+        <property name="dFechaCreacion" type="java.sql.Date" access="field">
+            <column name="DFECHACREACION" />
+        </property>
+        <property name="dFechaUltimaModificacion" type="java.sql.Date" access="field">
+            <column name="DFECHAULTIMAMODIFICACION" />
+        </property>
+    </class>
+</hibernate-mapping>
