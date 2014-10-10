@@ -3,25 +3,17 @@
 <!-- --------------------------------------------------------------- -->
 
 <!-- jQuery Version 1.11.0 -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/jquery-1.11.0.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Plugin JavaScript -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/plugins/metisMenu/metisMenu.min.js"></script>
-
-<!-- Morris Charts JavaScript -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/plugins/morris/raphael.min.js"></script>
-<script
-	src="${pageContext.request.contextPath}/resources/js/plugins/morris/morris.min.js"></script>
-<script
-	src="${pageContext.request.contextPath}/resources/js/plugins/morris/morris-data.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script
-	src="${pageContext.request.contextPath}/resources/js/sumate-main.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/sumate-main.js"></script>
+	
+<!-- Bootstrap Image Gallery 3.1.1 -->
+<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/plugins/bsimagegallery311/js/bootstrap-image-gallery.min.js"></script>
+
+<!-- Modernizer -->
+<script src="${pageContext.request.contextPath}/resources/js/modernizr.custom.86080.js"></script>

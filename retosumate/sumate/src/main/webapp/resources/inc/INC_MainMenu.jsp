@@ -70,26 +70,32 @@
 						<i class="fa fa-caret-down"></i>
 				</a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><i class="fa fa-facebook fa-1 fa-fw"
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook fa-1 fa-fw"
 								data-href="https://developers.facebook.com/docs/plugins/"
-								data-layout="icon" data-width="100""></i> Facebook </a></li>
+								data-layout="icon">
+								</i> Facebook 
+							</a>
+						</li>
 						<li><a href="https://www.facebook.com/sharer/sharer.php?u="
 							title="Share on Facebook" target="_blank"
-							class="btn btn-social-icon btn-facebook"><i
-								class="fa fa-facebook"
-								onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);"></i>
-								Facebook </a></li>
-						<li><div class="fb-like"
+							class="btn btn-social-icon btn-facebook">
+								Facebook 
+							</a></li>
+						<li>
+							<div class="fb-like"
 								data-href="https://developers.facebook.com/docs/plugins/"
 								data-layout="button_count" data-action="recommend"
-								data-show-faces="true" data-share="true"></div></li>
-						<li><div class="fb-share-button"
+								data-show-faces="true" data-share="true">
+							</div>
+						</li>
+						<li>
+							<div class="fb-share-button"
 								data-href="https://developers.facebook.com/docs/plugins/"
-								data-layout="icon" data-width="100"></div></li>
-						<li><a href="#"><i class="fa fa-twitter fa-1 fa-fw"></i>
-								Twitter</a></li>
-						<li><a href="https://twitter.com/share"
-							class="twitter-share-button" data-count="none"></a></li>
+								data-layout="icon" data-width="100">
+							</div>
+						</li>
 					</ul> <!-- /.dropdown-share --></li>
 				<!-- /.dropdown -->
 				<li class="dropdown"><a class="dropdown-toggle"

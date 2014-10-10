@@ -11,7 +11,7 @@
 	<div class="carousel-inner">
 		<div class="item active">
 			<img
-				src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_001.jpg"
+				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_001.jpg"
 				data-src="holder.js/1024x200" alt="Experiencias Previas">
 			<div class="container">
 				<div class="carousel-caption">
@@ -23,7 +23,7 @@
 		</div>
 		<div class="item">
 			<img
-				src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_002.jpg"
+				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_002.jpg"
 				data-src="holder.js/1024x200" alt="Eventos">
 			<div class="container">
 				<div class="carousel-caption">
@@ -34,7 +34,7 @@
 		</div>
 		<div class="item">
 			<img
-				src="${pageContext.request.contextPath}/resources/gambar/carr_bkg_003.jpg"
+				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_003.jpg"
 				data-src="holder.js/1024x200" alt="Noticias">
 			<div class="container">
 				<div class="carousel-caption">
