@@ -12,7 +12,7 @@
 		<div class="item active">
 			<img
 				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_001.jpg"
-				data-src="holder.js/1024x200" alt="Experiencias Previas">
+				data-src="holder.js/1024x550" alt="Experiencias Previas">
 			<div class="container">
 				<div class="carousel-caption">
 					<a class="btn btn-success" href="#" role="button">Experiencias
@@ -24,7 +24,7 @@
 		<div class="item">
 			<img
 				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_002.jpg"
-				data-src="holder.js/1024x200" alt="Eventos">
+				data-src="holder.js/1024x550" alt="Eventos">
 			<div class="container">
 				<div class="carousel-caption">
 					<a class="btn btn-info" href="#" role="button">Eventos&nbsp;<span
@@ -35,7 +35,7 @@
 		<div class="item">
 			<img
 				src="${pageContext.request.contextPath}/resources/imgs/carrt/carr_bkg_003.jpg"
-				data-src="holder.js/1024x200" alt="Noticias">
+				data-src="holder.js/1024x550" alt="Noticias">
 			<div class="container">
 				<div class="carousel-caption">
 					<a class="btn btn-danger" href="#" role="button">Noticias&nbsp;<span

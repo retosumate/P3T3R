@@ -1,39 +1,105 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Oct 8, 2014 6:22:55 PM by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.ec.sumate.spring.model.Usuario" table="USUARIO">
-        <id name="idUsuario" type="int">
+    <class name="com.ec.sumate.spring.model.Usuario" table="USUARIOS">
+        <id name="idusuario" type="int">
             <column name="IDUSUARIO" />
             <generator class="assigned" />
         </id>
-        <property name="vNombres" type="java.lang.String" access="field">
-            <column name="VNOMBRES" />
-        </property>
-        <property name="vApellidos" type="java.lang.String" access="field">
-            <column name="VAPELLIDOS" />
-        </property>
-        <property name="vEmail" type="java.lang.String" access="field">
-            <column name="VEMAIL" />
-        </property>
-        <property name="vLogin" type="java.lang.String" access="field">
-            <column name="VLOGIN" />
-        </property>
-        <property name="vContrasenia" type="java.lang.String" access="field">
-            <column name="VCONTRASENIA" />
-        </property>
-        <property name="iTipo" type="int" access="field">
-            <column name="ITIPO" />
-        </property>
-        <property name="iActivo" type="int" access="field">
-            <column name="IACTIVO" />
-        </property>
-        <property name="dFechaCreacion" type="java.sql.Date" access="field">
+        <property name="dfechacreacion" type="java.util.Date">
             <column name="DFECHACREACION" />
         </property>
-        <property name="dFechaUltimaModificacion" type="java.sql.Date" access="field">
-            <column name="DFECHAULTIMAMODIFICACION" />
+        <property name="dfechamodificacion" type="java.util.Date">
+            <column name="DFECHAMODIFICACION" />
         </property>
+        <property name="iactivo" type="int">
+            <column name="IACTIVO" />
+        </property>
+        <property name="icantidadarticulos" type="int">
+            <column name="ICANTIDADARTICULOS" />
+        </property>
+        <property name="icantidadbadges" type="int">
+            <column name="ICANTIDADBADGES" />
+        </property>
+        <property name="icantidadpuntos" type="int">
+            <column name="ICANTIDADPUNTOS" />
+        </property>
+        <property name="itipousuario" type="int">
+            <column name="ITIPOUSUARIO" />
+        </property>
+        <property name="vapellidomaterno" type="java.lang.String">
+            <column name="VAPELLIDOMATERNO" />
+        </property>
+        <property name="vapellidopaterno" type="java.lang.String">
+            <column name="VAPELLIDOPATERNO" />
+        </property>
+        <property name="varchivoimagen" type="java.lang.String">
+            <column name="VARCHIVOIMAGEN" />
+        </property>
+        <property name="vcalle" type="java.lang.String">
+            <column name="VCALLE" />
+        </property>
+        <property name="vcodigopostal" type="java.lang.String">
+            <column name="VCODIGOPOSTAL" />
+        </property>
+        <property name="vcontrasena" type="java.lang.String">
+            <column name="VCONTRASENA" />
+        </property>
+        <property name="vemail" type="java.lang.String">
+            <column name="VEMAIL" />
+        </property>
+        <property name="ventrecalles" type="java.lang.String">
+            <column name="VENTRECALLES" />
+        </property>
+        <property name="vlogin" type="java.lang.String">
+            <column name="VLOGIN" />
+        </property>
+        <property name="vnombres" type="java.lang.String">
+            <column name="VNOMBRES" />
+        </property>
+        <property name="vnumexterior" type="java.lang.String">
+            <column name="VNUMEXTERIOR" />
+        </property>
+        <property name="vnuminterior" type="java.lang.String">
+            <column name="VNUMINTERIOR" />
+        </property>
+        <property name="vposicionglobal" type="java.lang.String">
+            <column name="VPOSICIONGLOBAL" />
+        </property>
+        <property name="vubicacion" type="java.lang.String">
+            <column name="VUBICACION" />
+        </property>
+        <list name="lstEventosUsuarios" inverse="false" table="EVENTOUSUARIO" lazy="true">
+            <key>
+                <column name="IDUSUARIO" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.EventoUsuario" />
+        </list>
+        <list name="clasificaciones" inverse="false" table="CLASIFICACION" lazy="true">
+            <key>
+                <column name="IDUSUARIO" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Clasificacion" />
+        </list>
+        <many-to-one name="colonia" class="com.ec.sumate.spring.model.Colonia" fetch="join">
+            <column name="COLONIA" />
+        </many-to-one>
+        <many-to-one name="estado" class="com.ec.sumate.spring.model.Estado" fetch="join">
+            <column name="ESTADO" />
+        </many-to-one>
+        <many-to-one name="municipio" class="com.ec.sumate.spring.model.Municipio" fetch="join">
+            <column name="MUNICIPIO" />
+        </many-to-one>
+        <many-to-one name="pais" class="com.ec.sumate.spring.model.Pais" fetch="join">
+            <column name="PAIS" />
+        </many-to-one>
+        <many-to-one name="perfilacceso" class="com.ec.sumate.spring.model.Perfilacceso" fetch="join">
+            <column name="PERFILACCESO" />
+        </many-to-one>
+        <one-to-one name="lstUsuariosPremios" class="com.ec.sumate.spring.model.UsuarioPremio"></one-to-one>
     </class>
 </hibernate-mapping>

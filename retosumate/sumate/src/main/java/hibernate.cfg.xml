@@ -1,11 +1,27 @@
-<?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE hibernate-configuration PUBLIC
-        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
-<hibernate-configuration>        
-  <session-factory>
-    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="show_sql">true</property>  
-    <mapping resource="com/ec/sumate/spring/model/Usuario.hbm.xml"/>
-  </session-factory>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="show_sql">true</property>
+  <mapping resource="com/ec/sumate/spring/model/Usuario.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Clasificacion.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Colonia.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Estado.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Evento.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/EventoMedia.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/EventoUsuario.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/EventoUsuarioPK.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Municipio.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Organizacion.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Pais.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Perfilacceso.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Premio.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/Recompensa.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/RecompensaAccion.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/RecompensaPremio.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/RecompensaPremioPK.hbm.xml"/>
+  <mapping resource="com/ec/sumate/spring/model/UsuarioPremio.hbm.xml"/>
+ </session-factory>
 </hibernate-configuration>

@@ -1,18 +1,23 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+<fmt:setLocale value="${locale}"/>
+<fmt:setLocale value="es_ES"/>
+<fmt:setBundle basename="messages" />
 
 <html lang="en">
 
 <head>
-
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Eclipse Digital">
     
-    <title>S&uacute;mate</title>    
+    <title><fmt:message key="home.lbl.titulo"/></title>    
 	<jsp:include page="/resources/inc/INC_MainPageHeader.jsp" flush="true"></jsp:include>
     
 </head>
@@ -23,15 +28,16 @@
     	<jsp:include page="/resources/inc/INC_BodyBckg.jsp" flush="true"></jsp:include>		
     	
         <!-- /#wrapper -->
-        <div id="contenido-principal" class="container wrapper overlay">             
-              <jsp:include page="/resources/inc/INC_BodyCarousel.jsp" flush="true"></jsp:include>        
+        <div id="contenido-principal" class="overlay col-md-12 col-sm-12">                           
 <!-- -------------------------------------------- ROW#1 -------------------------------------------------------------------------------------------- -->
             <div class="row">
-                <div class="col-md-12"><h3>Eventos / Programas </h3></div>
+                <div class="col-md-12">
+                	<h3><fmt:message key="home.lbl.subtitulo1"/></h3>
+                </div>
                 <%String  descripcion = "lorem ipsum "; %>                
                 <% for (int i=0; i< 7; i++) { %>
                 	
-                	<div class="col-md-6 col-sm-12">
+                	<div class="col-md-4 col-sm-12">
                 		<jsp:include page="/resources/frags/FRG_PanelStyle1.jsp" flush="true">
                 			<jsp:param name="p_img" 		value="5"></jsp:param>
                 			<jsp:param name="p_titulo1" 	value="p_titulo1"></jsp:param>

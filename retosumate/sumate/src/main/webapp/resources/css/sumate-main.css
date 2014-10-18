@@ -45,8 +45,6 @@ body {
 .panel-style1 {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
-    width: 350px;
-    height: 350px;
 }
 
 .image-box {	
@@ -57,15 +55,23 @@ body {
 .image-box img {	
     padding: 0px 0px 0px 0px;
     margin: 2px 2px 2px 2px;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 100px;
     vertical-align: top;    
 }
 
 .panel-style1-img {
-	width: 45px;
-	height: 40px;
-	margin: 2px 2px 2px 2px;
+	width: 25px;
+	height: 25px;
+	margin: 0px 0px 0px 0px;
+}
+
+.panel-style1-a {
+	margin: 1px 1px 1px 1px;
+}
+
+.panel-style1-footer-right {
+	text-align: right;
 }
 
 .footer-fixed {
@@ -204,7 +210,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: 200px;
+  height: 550px;
   margin-bottom: 15px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -214,7 +220,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 200px;
+  height: 550px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
@@ -222,7 +228,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 550px;
   -webkit-border-image: round;
   -webkit-border-r: 4em;
 }

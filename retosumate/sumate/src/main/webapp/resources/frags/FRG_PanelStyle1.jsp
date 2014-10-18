@@ -83,45 +83,47 @@ if (p_style1!=null && p_style1.trim().equals("")) {
 		<a href="#"><h4><%=p_titulo1 %></h4></a>
 	</div>
 	<div class="panel-body panel-style1">
-		<div class="img-thumbnail image-box">
-			<img src="${pageContext.request.contextPath}/resources/imgs/eventos/EVENTO_<%=p_img %>.jpg" />
-		</div>
+	
+		<div class="media">
+			<a class="pull-left" href="#">
+		    	<img class="media-object" src="${pageContext.request.contextPath}/resources/imgs/eventos/EVENTO_<%=p_img %>.jpg" alt="..." width="200px" height="150px">
+		  	</a>
+		  	<div class="media-body">
+		    	<h4 class="media-heading"><%=p_titulo2 %></h4>
+		    	<div class="text-justify">
+					<p>	<%=p_descr %> </p>
+				</div>
+		  	</div>
+		</div> <br />
 		<div id="image-gallery">
-			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery> 
-				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class="img-circle panel-style1-img">
+			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery class="panel-style1-a"> 
+				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class=" panel-style1-img">
 			</a>
-			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery> 
-				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class="img-circle panel-style1-img">
+			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery class="panel-style1-a"> 
+				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class=" panel-style1-img">
 			</a>
-			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery> 
-				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class="img-circle panel-style1-img">
+			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery class="panel-style1-a"> 
+				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class=" panel-style1-img">
 			</a>
-			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery> 
-				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class="img-circle panel-style1-img">
+			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery class="panel-style1-a"> 
+				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class=" panel-style1-img">
 			</a>
-			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery> 
-				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class="img-circle panel-style1-img">
+			<a href="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" title="noimage" data-gallery class="panel-style1-a"> 
+				<img src="${pageContext.request.contextPath}/resources/imgs/thumbnails/noimage.jpg" alt="noimage" class=" panel-style1-img">
 			</a>
-		</div>
-		<div class="text-left">
-			<a class="btn btn-social-icon btn-xs btn-twitter"> <i
-				class="fa fa-twitter"></i>
-			</a> <a class="btn btn-social-icon btn-xs btn-facebook"> <i
-				class="fa fa-facebook"></i>
-			</a> <a class="btn btn-social-icon btn-xs btn-google-plus"> <i
-				class="fa fa-google-plus"></i>
+		</div>				
+		<div class="panel-footer">
+			<div id="socialbuttons" class="panel-style1-footer-right">
+				<a class="btn btn-social-icon btn-xs btn-twitter"> 
+				<i class="fa fa-twitter"></i>
+			</a> 
+			<a class="btn btn-social-icon btn-xs btn-facebook"> 
+				<i class="fa fa-facebook"></i>
+			</a> 
+			<a class="btn btn-social-icon btn-xs btn-google-plus"> 
+				<i class="fa fa-google-plus"></i>
 			</a>
-		</div>
-		<div class="text-justify">
-			<p>
-				<a><span class="glyphicon glyphicon-bullhorn"> </span>
-				<h5><%=p_titulo2 %></h5></a> </span>
-			<h6><%=p_titulo3 %></h6>
-			</a>
-			</p>
-			<p>
-				<%=p_descr %>
-			</p>
+			</div>
 		</div>
 	</div>
 </div>
