@@ -24,11 +24,10 @@
     
     <body>
     	<jsp:include page="/resources/inc/INC_BodyFirst.jsp" flush="true"></jsp:include>
-     	<jsp:include page="/resources/inc/INC_MainMenu.jsp" flush="true"></jsp:include> 
-    	<jsp:include page="/resources/inc/INC_BodyBckg.jsp" flush="true"></jsp:include>		
+     	<jsp:include page="/resources/inc/INC_MainMenu.jsp" flush="true"></jsp:include>    			
     	
         <!-- /#wrapper -->
-        <div id="contenido-principal" class="overlay col-md-12 col-sm-12">                           
+        <div id="contenido-principal" class="col-md-12 col-sm-12">                           
 <!-- -------------------------------------------- ROW#1 -------------------------------------------------------------------------------------------- -->
             <div class="row">
                 <div class="col-md-12">

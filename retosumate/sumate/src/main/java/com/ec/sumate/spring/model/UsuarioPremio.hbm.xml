@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.UsuarioPremio" table="usuarios_premios">
+        <id name="idusuario" type="int">
+            <column name="IDUSUARIO" />
+            <generator class="assigned" />
+        </id>
+        <property name="dfechaganado" type="java.util.Date">
+            <column name="DFECHAGANADO" />
+        </property>
+        <many-to-one name="evento" class="com.ec.sumate.spring.model.Evento" fetch="join">
+            <column name="EVENTO" />
+        </many-to-one>
+        <many-to-one name="organizacione" class="com.ec.sumate.spring.model.Organizacion" fetch="join">
+            <column name="ORGANIZACIONE" />
+        </many-to-one>
+        <many-to-one name="premio" class="com.ec.sumate.spring.model.Premio" fetch="join">
+            <column name="PREMIO" />
+        </many-to-one>
+        <many-to-one name="recompensa" class="com.ec.sumate.spring.model.Recompensa" fetch="join">
+            <column name="RECOMPENSA" />
+        </many-to-one>
+        <one-to-one name="usuario" class="com.ec.sumate.spring.model.Usuario"></one-to-one>
+    </class>
+</hibernate-mapping>

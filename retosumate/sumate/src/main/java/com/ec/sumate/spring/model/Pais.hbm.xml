@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.Pais" table="paises">
+        <id name="idpais" type="int">
+            <column name="IDPAIS" />
+            <generator class="assigned" />
+        </id>
+        <property name="iactivo" type="int">
+            <column name="IACTIVO" />
+        </property>
+        <property name="vdescripcion" type="java.lang.String">
+            <column name="VDESCRIPCION" />
+        </property>
+        <property name="vposicionglobal" type="java.lang.String">
+            <column name="VPOSICIONGLOBAL" />
+        </property>
+        <list name="lstEventos" inverse="false" table="EVENTO" lazy="true">
+            <key>
+                <column name="IDPAIS" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Evento" />
+        </list>
+        <list name="lstOrganizaciones" inverse="false" table="ORGANIZACION" lazy="true">
+            <key>
+                <column name="IDPAIS" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Organizacion" />
+        </list>
+        <list name="lstUsuarios" inverse="false" table="USUARIO" lazy="true">
+            <key>
+                <column name="IDPAIS" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Usuario" />
+        </list>
+    </class>
+</hibernate-mapping>

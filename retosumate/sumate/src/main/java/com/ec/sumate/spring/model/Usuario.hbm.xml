@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.ec.sumate.spring.model.Usuario" table="USUARIOS">
+    <class name="com.ec.sumate.spring.model.Usuario" table="usuarios">
         <id name="idusuario" type="int">
             <column name="IDUSUARIO" />
             <generator class="assigned" />

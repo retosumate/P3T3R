@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.Recompensa" table="recompensas">
+        <id name="idrecompensa" type="int">
+            <column name="IDRECOMPENSA" />
+            <generator class="assigned" />
+        </id>
+        <property name="iactivo" type="int">
+            <column name="IACTIVO" />
+        </property>
+        <property name="vdescripcion" type="java.lang.String">
+            <column name="VDESCRIPCION" />
+        </property>
+        <list name="lstEventos" inverse="false" table="EVENTO" lazy="true">
+            <key>
+                <column name="IDRECOMPENSA" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Evento" />
+        </list>
+        <list name="lstRecompensasPremios" inverse="false" table="RECOMPENSAPREMIO" lazy="true">
+            <key>
+                <column name="IDRECOMPENSA" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.RecompensaPremio" />
+        </list>
+        <list name="lstUsuariosPremios" inverse="false" table="USUARIOPREMIO" lazy="true">
+            <key>
+                <column name="IDRECOMPENSA" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.UsuarioPremio" />
+        </list>
+    </class>
+</hibernate-mapping>

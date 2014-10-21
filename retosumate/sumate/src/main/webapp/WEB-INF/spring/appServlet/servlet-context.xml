@@ -25,7 +25,14 @@
 	
 	<context:component-scan base-package="com.ec.sumate" />
 	
-    <bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+<!--     <bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"> -->
+<!--         <property name="driverClassName" value="com.mysql.jdbc.Driver"/> -->
+<!--         <property name="url" value="jdbc:mysql://130.255.190.8:3306/solucion_dsumate"/> -->
+<!--         <property name="username" value="solucion_dsumate"/> -->
+<!--         <property name="password" value="pepsico.1"/> -->
+<!--     </bean>	 -->
+
+	 <bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/dsumate"/>
         <property name="username" value="sumate"/>

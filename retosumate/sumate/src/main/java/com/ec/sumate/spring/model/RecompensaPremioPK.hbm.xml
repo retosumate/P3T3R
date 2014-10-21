@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.RecompensaPremioPK" table="RECOMPENSAPREMIOPK">
+        <id name="idpremio" type="int">
+            <column name="IDPREMIO" />
+            <generator class="assigned" />
+        </id>
+        <property name="idrecompensa" type="int">
+            <column name="IDRECOMPENSA" />
+        </property>
+        <property name="ideventorecompensa" type="int">
+            <column name="IDEVENTORECOMPENSA" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2014 2:48:30 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ec.sumate.spring.model.Perfilacceso" table="perfilacceso">
+        <id name="idperfilacceso" type="int">
+            <column name="IDPERFILACCESO" />
+            <generator class="assigned" />
+        </id>
+        <property name="iactivo" type="int">
+            <column name="IACTIVO" />
+        </property>
+        <property name="vdescripcion" type="java.lang.String">
+            <column name="VDESCRIPCION" />
+        </property>
+        <list name="lstUsuarios" inverse="false" table="USUARIO" lazy="true">
+            <key>
+                <column name="IDPERFILACCESO" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="com.ec.sumate.spring.model.Usuario" />
+        </list>
+    </class>
+</hibernate-mapping>

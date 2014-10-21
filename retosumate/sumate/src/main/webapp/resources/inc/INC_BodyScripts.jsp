@@ -6,7 +6,7 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/plugins/bootstrap-3.2.0/dist/js/bootstrap.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="${pageContext.request.contextPath}/resources/js/sumate-main.js"></script>
