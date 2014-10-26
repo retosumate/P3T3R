@@ -21,22 +21,24 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 	</bean>
 	
 	<context:component-scan base-package="com.ec.sumate" />
-	
-<!--     <bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close"> -->
-<!--         <property name="driverClassName" value="com.mysql.jdbc.Driver"/> -->
-<!--         <property name="url" value="jdbc:mysql://130.255.190.8:3306/solucion_dsumate"/> -->
-<!--         <property name="username" value="solucion_dsumate"/> -->
-<!--         <property name="password" value="pepsico.1"/> -->
-<!--     </bean>	 -->
+
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="locations">  
+            <list>  
+                <value>classpath:jdbc.properties</value>  
+            </list>  
+        </property>  
+    </bean>  
 
 	 <bean id="mysqlDataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/dsumate"/>
-        <property name="username" value="sumate"/>
-        <property name="password" value="Sumate4lR3to"/>
+        <property name="driverClassName" value="${jdbc.driverClassName}" />  
+        <property name="url" value="${jdbc.url}" />  
+        <property name="username" value="${jdbc.username}" />  
+        <property name="password" value="${jdbc.password}" />  
     </bean>	
     
     <bean id="sessionFactory"
@@ -51,41 +53,22 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
-	<bean id="usuarioDao" class="com.ec.sumate.spring.dao.UsuarioDAOImpl">
+	<bean id="usuarioDao" class="com.ec.sumate.dao.UsuarioDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>
 	</bean>   
 	
-	<bean id="eventoDao" class="com.ec.sumate.spring.dao.EventoDAOImpl">
+	<bean id="eventoDao" class="com.ec.sumate.dao.EventoDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>
 	</bean>  
 	
-	<bean id="clasificacionDao" class="com.ec.sumate.spring.dao.ClasificacionDAOImpl">
+	<bean id="clasificacionDao" class="com.ec.sumate.dao.ClasificacionDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>
 	</bean>    	
-	
-	<!-- 	Definiendo la Internacionalizacon -->
-	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="classpath:messages" />
-        <property name="defaultEncoding" value="UTF-8" />
-    </bean>
- 
-    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
-        <property name="defaultLocale" value="en" />
-        <property name="cookieName" value="myAppLocaleCookie" />
-        <property name="cookieMaxAge" value="3600" />
-    </bean>
- 
-    <mvc:interceptors>
-        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
-            <property name="paramName" value="locale" />
-        </bean>
-    </mvc:interceptors>
-	
 	
 </beans>

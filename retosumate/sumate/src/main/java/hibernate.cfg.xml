@@ -2,26 +2,38 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
                                          "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory>
-  <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-  <property name="show_sql">true</property>
-  <mapping resource="com/ec/sumate/spring/model/Usuario.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Clasificacion.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Colonia.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Estado.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Evento.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/EventoMedia.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/EventoUsuario.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/EventoUsuarioPK.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Municipio.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Organizacion.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Pais.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Perfilacceso.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Premio.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/Recompensa.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/RecompensaAccion.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/RecompensaPremio.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/RecompensaPremioPK.hbm.xml"/>
-  <mapping resource="com/ec/sumate/spring/model/UsuarioPremio.hbm.xml"/>
- </session-factory>
+	<session-factory>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.jdbc.use_get_generated_keys">true</property>
+		
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<mapping class="com.ec.sumate.entity.Usuario" />
+		<mapping class="com.ec.sumate.entity.Clasificacion" />
+		<mapping class="com.ec.sumate.entity.Colonia" />
+		<mapping class="com.ec.sumate.entity.Estado" />
+		<mapping class="com.ec.sumate.entity.Evento" />
+		<mapping class="com.ec.sumate.entity.EventoMedia" />
+		<mapping class="com.ec.sumate.entity.EventoUsuario" />
+		<mapping class="com.ec.sumate.entity.EventoUsuarioPK" />
+		<mapping class="com.ec.sumate.entity.Municipio" />
+		<mapping class="com.ec.sumate.entity.Organizacion" />
+		<mapping class="com.ec.sumate.entity.Pais" />
+		<mapping class="com.ec.sumate.entity.Perfilacceso" />
+		<mapping class="com.ec.sumate.entity.Premio" />
+		<mapping class="com.ec.sumate.entity.Recompensa" />
+		<mapping class="com.ec.sumate.entity.Recompensasaccion" />
+		<mapping class="com.ec.sumate.entity.RecompensaPremio" />
+		<mapping class="com.ec.sumate.entity.RecompensaPremioPK" />
+		<mapping class="com.ec.sumate.entity.UsuarioPremio" />
+
+	</session-factory>
 </hibernate-configuration>

@@ -1,30 +1,22 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<fmt:setLocale value="${locale}"/>
-<fmt:setLocale value="es_ES"/>
-<fmt:setBundle basename="messages" />
-
-<html lang="en">
-
+<html>
 <head>
-	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Eclipse Digital">
-    
+    <jsp:include page="/WEB-INF/views/inc/INC_MainPageHeader.jsp" flush="true"></jsp:include>
     <title><fmt:message key="home.lbl.titulo"/></title>    
-	<jsp:include page="/resources/inc/INC_MainPageHeader.jsp" flush="true"></jsp:include>
-    
 </head>
     
     <body>
-    	<jsp:include page="/resources/inc/INC_BodyFirst.jsp" flush="true"></jsp:include>
-     	<jsp:include page="/resources/inc/INC_MainMenu.jsp" flush="true"></jsp:include>    			
+    	<jsp:include page="/WEB-INF/views/inc/INC_BodyFirst.jsp" flush="true"></jsp:include>
+     	<jsp:include page="/WEB-INF/views/inc/INC_MainMenu.jsp" flush="true"></jsp:include>    			
     	
         <!-- /#wrapper -->
         <div id="contenido-principal" class="col-md-12 col-sm-12">                           
@@ -37,7 +29,7 @@
                 <% for (int i=0; i< 7; i++) { %>
                 	
                 	<div class="col-md-4 col-sm-12">
-                		<jsp:include page="/resources/frags/FRG_PanelStyle1.jsp" flush="true">
+                		<jsp:include page="/WEB-INF/views/frags/FRG_PanelStyle1.jsp" flush="true">
                 			<jsp:param name="p_img" 		value="5"></jsp:param>
                 			<jsp:param name="p_titulo1" 	value="p_titulo1"></jsp:param>
                 			<jsp:param name="p_titulo2" 	value="p_titulo2"></jsp:param>
@@ -62,7 +54,7 @@
                 <% } %>            
             </div>                
         </div>
-		<jsp:include page="/resources/inc/INC_BodyScripts.jsp" flush="true"></jsp:include>        
-        <jsp:include page="/resources/inc/INC_MainPageFooter.jsp" flush="true"></jsp:include>
+		<jsp:include page="/WEB-INF/views/inc/INC_BodyScripts.jsp" flush="true"></jsp:include>        
+        <jsp:include page="/WEB-INF/views/inc/INC_MainPageFooter.jsp" flush="true"></jsp:include>
     </body>    
 </html>
